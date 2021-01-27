@@ -58,7 +58,13 @@
     if(self) {
         self.datePicker = [[UIDatePicker alloc] initWithFrame:CGRectZero];
         self.datePicker.translatesAutoresizingMaskIntoConstraints = NO;
-        
+
+        if (@available(iOS 13.4, *)) {}
+        {
+            self.datePicker.preferredDatePickerStyle = UIDatePickerStyleWheels;
+        }
+
+
         self.datePickerHeightConstraint = [NSLayoutConstraint constraintWithItem:self.datePicker attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:0];
         
         if(RM_CURRENT_ORIENTATION_IS_LANDSCAPE_PREDICATE) {
