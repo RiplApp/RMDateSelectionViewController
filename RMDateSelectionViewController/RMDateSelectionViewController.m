@@ -59,7 +59,7 @@
         self.datePicker = [[UIDatePicker alloc] initWithFrame:CGRectZero];
         self.datePicker.translatesAutoresizingMaskIntoConstraints = NO;
 
-        if (@available(iOS 13.4, *)) {}
+        if (@available(iOS 13.4, *))
         {
             self.datePicker.preferredDatePickerStyle = UIDatePickerStyleWheels;
         }
